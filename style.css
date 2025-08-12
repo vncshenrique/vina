@@ -1,0 +1,77 @@
+:root{
+    --cor-fundo: #01080E;
+    --cor-principal: #0B0D20;
+    --cor-secundaria: #212333;
+    --cor-destaque: #2BDEFD;
+    --cor-texto: #D7F9FF;
+}
+
+body {
+    background-image: url("estadio.jpg");
+
+    color: var(--cor-texto);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0; /* Remove margem padrão do body */
+    font-family: 'Arial', sans-serif; /* Uma fonte mais comum */
+}
+
+.caixa-principal{
+    background-color: var(--cor-principal);
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    padding: 30px; /* Aumenta o padding */
+    border-radius: 10px; /* Borda arredondada */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Sombra para destaque */
+}
+
+h1{
+    color: var(--cor-destaque);
+    margin-bottom: 25px; /* Espaço abaixo do título */
+    font-size: 2em; /* Tamanho do título */
+}
+
+.caixa-perguntas {
+    font-size: 1.2em; /* Tamanho da fonte das perguntas */
+    margin-bottom: 20px;
+}
+
+.caixa-alternativas {
+    display: flex;
+    flex-direction: column; /* Botões um abaixo do outro */
+    gap: 15px; /* Espaço entre os botões */
+    margin-top: 20px;
+}
+
+.botao-alternativa { /* Nova classe para estilizar os botões */
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto);
+    border: none;
+    padding: 15px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.botao-alternativa:hover {
+    background-color: var(--cor-destaque);
+    color: var(--cor-principal);
+    transform: translateY(-2px); /* Efeito de leve levantamento */
+}
+
+.caixa-resultado {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: var(--cor-secundaria);
+    border-radius: 8px;
+    display: none; /* Escondido por padrão */
+}
+
+.texto-resultado {
+    font-size: 1.1em;
+    line-height: 1.8;
+}
